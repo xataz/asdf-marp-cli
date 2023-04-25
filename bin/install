@@ -11,10 +11,10 @@ set \
 : "${ASDF_INSTALL_PATH?}"
 
 # make a temporary download directory with a cleanup hook
-TMP_DOWNLOAD_DIR="$(mktemp -d -t "asdf_restic_XXXXXX")"
+TMP_DOWNLOAD_DIR="$(mktemp -d -t "asdf_marpcli_XXXXXX")"
 readonly TMP_DOWNLOAD_DIR
 
-#trap 'rm -rf "${TMP_DOWNLOAD_DIR?}"' EXIT
+trap 'rm -rf "${TMP_DOWNLOAD_DIR?}"' EXIT
 
 install () {
   # local -r install_type="$1"
