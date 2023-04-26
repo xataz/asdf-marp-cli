@@ -50,7 +50,7 @@ install () {
     done
     echo "Done"
   else
-    echo "Error: restic version ${version} not found" >&2
+    echo "Error: marp-cli version ${version} not found" >&2
     exit 1
   fi
 }
